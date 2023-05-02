@@ -12,6 +12,10 @@
 
 var carmen = {
   // TODO YOUR CODE HERE
+  name: 'Carmen SanDiego',
+  heightInInches: 67,
+  captured: false,
+  outfit: ['red hat', 'red coat', 'yellow scarf', 'black boots']
 }
 
 // So the warrent gets updated as quickly as possible our database needs to quickly check if she has been captured
@@ -19,6 +23,7 @@ var carmen = {
 // write a function that returns the value of the captured property on your carmen object using dot notation.
 function isCaptured() {
   // TODO YOUR CODE HERE
+  return carmen.captured;
 }
 
 // Now that that is settled lets, figure out where we are going from this plane ticket stub we found where some information has been scrambled
@@ -33,6 +38,8 @@ var ticket = {
 // Write a function that uses bracket notation to change one of the the ticket's keys to the new value
 function updateValue(key, newValue) {
   // TODO YOUR CODE HERE
+  ticket[key] = newValue;
+  // return ticket;
 }
 
 // Create a function that uses dot or bracket notation to create a property 
@@ -40,10 +47,14 @@ function updateValue(key, newValue) {
 
 function flightStatus(status) {
   // TODO YOUR CODE HERE
+  ticket.status = status;
+  return ticket;
 }
 
 
 // The ticket id is messing with our internal systems id's write a function that will delete the id property off of the ticket object (DO NOT EDIT THE PRE-WRITTEN CODE)
 function removeId() {
   // TODO YOUR CODE HERE
+  delete ticket.id;
+  return ticket;
 }

@@ -12,6 +12,29 @@
 
 function daysPosition(day, offset) {
   // TODO YOUR CODE HERE
+  let dayTest = day.toLowerCase()
+  console.log(dayTest)
+  const week = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+  if (!week.includes(dayTest)) {
+    return "That's not a day of the week"
+  }
+
+  let index = week.findIndex(d => d == dayTest);
+  console.log(index);
+  if (!offset) {
+    return index + 1
+  } else {
+    if (index == 0) {
+      return 7
+    } else {
+      return index
+
+    }
+
+
+
+  }
+
 }
 
 
@@ -33,6 +56,30 @@ function daysPosition(day, offset) {
 
 function golfScore(score, par) {
   // TODO YOUR CODE HERE
+  let term;
+  switch (score - par) {
+    case -3:
+      term = "Ace";
+      break;
+    case -2:
+      term = "Eagle";
+      break;
+    case -1:
+      term = "Birdie";
+      break;
+    case 0:
+      term = "Par";
+      break;
+    case 1:
+      term = "Bogie";
+      break;
+    case 2:
+      term = "Double";
+      break;
+    default:
+      term = "Ouch";
+  }
+  return term;
 }
 
 
@@ -59,4 +106,16 @@ let count = 0
 
 function cardCounter(card) {
   // TODO YOUR CODE HERE
+  let posArr = ['2', '3', '4', '5', '6'];
+  let negArr = ['10', 'J', 'Q', 'K', 'A'];
+  if (posArr.includes(card)) {
+    count++
+  } else if (negArr.includes(card)) {
+    count--
+  }
+  if (count > 0) {
+    return `${count} Bet`
+  } else {
+    return `${count} Hold`
+  }
 }
