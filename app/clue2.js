@@ -8,9 +8,8 @@ function largerNum(num1, num2) {
   // TODO YOUR CODE HERE
   if (num1 > num2) {
     return num1
-  } else {
-    return num2
   }
+  return num2
 }
 
 
