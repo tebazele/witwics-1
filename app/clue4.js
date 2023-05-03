@@ -12,6 +12,21 @@
 
 function daysPosition(day, offset) {
   // TODO YOUR CODE HERE
+  let days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']
+
+  let dayIndex = days.indexOf(day)
+  if (dayIndex == -1) {
+    return "That's not a day of the week"
+  }
+  if (offset) {
+    if (dayIndex == 0) {
+      return 7
+    } else {
+      return dayIndex
+    }
+  } else {
+    return dayIndex + 1
+  }
 }
 
 
